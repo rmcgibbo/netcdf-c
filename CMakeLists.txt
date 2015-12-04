@@ -871,39 +871,7 @@ IF(ENABLE_PNETCDF)
   ELSE(NOT PNETCDF)
     SET(USE_PARALLEL ON CACHE BOOL "")
   ENDIF(NOT PNETCDF)
-#  ELSE()
-##	SET(TMP_INC ${CMAKE_REQUIRED_INCLUDES})
-#	SET(TMP_LB ${CMAKE_REQUIRED_LIBRARIES})
-#	SET(CMAKE_REQUIRED_LIBRARIES ${CMAKE_REQUIRED_LIBRARIES} ${PNETCDF})
-#	SET(CMAKE_REQUIRED_INCLUDES ${CMAKE_REQUIRED_INCLUDES} ${PNETCDF_INCLUDE_DIR})
-	# Check to see if version > 1.6.0
-	# CHECK_C_SOURCE_RUNS("
-		#include <stdio.h>
-      		#include <pnetcdf.h>
-    #  		int main() {
-    #  		int major = PNETCDF_VERSION_MAJOR;
-    #  		int minor = PNETCDF_VERSION_MINOR;
-    #  		int version = major*1000 + minor;
-    #  		int ok = (version >= (1*1000 + 6));
-    #  		return ok?0:1;}"
-    #  		HAVE_PNETCDF_16)
 
-#	SET(CMAKE_REQUIRED_INCLUDES ${TMP_INC})
-#	SET(CMAKE_REQUIRED_LIBRARIES ${TMP_LB})
-
-	#IF(HAVE_PNETCDF_16)
-	#	SET(ENABLE_PNETCDF "OFF")
-    #  		MESSAGE(WARNING "ENABLE_PNETCDF requires version 1.6.0 or later; disabled")
-    #	ELSE()
-
-   #	    SET(STATUS_PNETCDF "ON")
-    #	    INCLUDE_DIRECTORIES(${PNETCDF_INCLUDE_DIR})
-    #	    SET(HAVE_LIBPNETCDF ON)
-    	    # pnetcdf => parallel
-    #	    SET(STATUS_PARALLEL "ON")
-    #	    SET(USE_PARALLEL ON)
-  	#ENDIF()
-    #ENDIF()
 ENDIF()
 
 # Enable Parallel Tests.
@@ -997,8 +965,24 @@ MARK_AS_ADVANCED(ENABLE_DOXYGEN_BUILD_RELEASE_DOCS DOXYGEN_ENABLE_TASKS ENABLE_D
 # Option checks
 ################################
 
+####
+# Check to see if char is signed or unsigned.
+####
 
-#
+SET(SIGNED_TEST_SOURCE "\n
+  #include <stdlib.h>\n
+  int main(void) {\n
+    char is_signed = (char) - 1;\n
+    if(is_signed < 0)\n
+      return 0;\n
+    else\n
+      return 1;\n
+}\n")
+
+CHECK_C_SOURCE_RUNS("${SIGNED_TEST_SOURCE}" CHAR_IS_SIGNED)
+MESSAGE(STATUS "Type 'char' is signed: ${CHAR_IS_SIGNED}")
+
+
 # Library include checks
 CHECK_INCLUDE_FILE("math.h"      HAVE_MATH_H)
 CHECK_INCLUDE_FILE("unistd.h"  HAVE_UNISTD_H)
