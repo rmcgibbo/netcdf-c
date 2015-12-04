@@ -130,19 +130,20 @@ inRange3(
     const nct_itype itype)
 {
     switch (itype) {
-        case NCT_SCHAR:
-        case NCT_CHAR:
+    case NCT_SCHAR:
+      return inRange_schar(value, datatype);
+    case NCT_CHAR:
 #ifdef CHAR_IS_SIGNED
-            return inRange_schar(value, datatype);
+      return inRange_schar(value, datatype);
 #else
-            return inRange_uchar(value, datatype);
+      return inRange_uchar(value, datatype);
 #endif
     case NCT_UCHAR:
-	return inRange_uchar(value, datatype);
+      return inRange_uchar(value, datatype);
     case NCT_FLOAT:
-	return inRange_float(value, datatype);
+      return inRange_float(value, datatype);
     default:
-	break;
+      break;
     }
     return inRange(value, datatype);
 }
