@@ -1,7 +1,19 @@
 break test_get.c:1169 if i == 17
+break test_get.c:1183 if i == 17 && j == 2
 commands
-watch allInExtRange
-watch allInIntRange
+print i
+print j
+print canConvert
+print allInExtRange
+print allInIntRange
+print err
 end
-
-break test_get.c:1182 if i == 17
+break test_get.c:1190
+commands
+print i
+print j
+print canConvert
+print allInExtRange
+print allInIntRange
+print err
+end
