@@ -14,8 +14,26 @@ SET (nc_test_SRC
   test_write.c
   util.c
   )
+
+SET (nc_test2_SRC
+  nc_test2.c
+  error.c
+  test_get.c
+  test_put.c
+  test_read.c
+  test_write.c
+  util.c
+  )
+
+
 ADD_EXECUTABLE(nc_test ${nc_test_SRC})
 TARGET_LINK_LIBRARIES(nc_test
+  netcdf
+  ${HAVE_LIBM}
+  )
+
+ADD_EXECUTABLE(nc_test2 ${nc_test2_SRC})
+TARGET_LINK_LIBRARIES(nc_test2
   netcdf
   ${HAVE_LIBM}
   )
