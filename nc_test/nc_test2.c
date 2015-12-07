@@ -185,6 +185,7 @@ main(int argc, char *argv[])
 	NC_TEST(nc_get_var_text);
 	NC_TEST(nc_get_var_uchar);
 	NC_TEST(nc_get_var_schar);
+    /*
 	NC_TEST(nc_get_var_short);
 	NC_TEST(nc_get_var_int);
 	NC_TEST(nc_get_var_long);
@@ -264,12 +265,13 @@ main(int argc, char *argv[])
 	NC_TEST(nc_inq_attid);
 	NC_TEST(nc_inq_attlen);
 	NC_TEST(nc_inq_atttype);
-
+    */
 	/* Test write functions */
-	NC_TEST(nc_create);
-	NC_TEST(nc_redef);
+	//NC_TEST(nc_create);
+	//NC_TEST(nc_redef);
 	/* NC_TEST(nc_enddef); *//* redundant */
-	NC_TEST(nc_sync);
+    /*
+    NC_TEST(nc_sync);
 	NC_TEST(nc_abort);
 	NC_TEST(nc_def_dim);
 	NC_TEST(nc_rename_dim);
@@ -356,6 +358,7 @@ main(int argc, char *argv[])
 	NC_TEST(nc_rename_att);
 	NC_TEST(nc_del_att);
 	NC_TEST(nc_set_default_format);
+    */
     }
 
     fprintf(stderr, "\n*** Total number of failures: %d\n", nfailsTotal);
