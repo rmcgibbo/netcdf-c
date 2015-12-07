@@ -2,7 +2,6 @@ break test_get.c:1169 if i == 17
 commands
 watch allInExtRange
 watch allInIntRange
-watch err
 end
 
 break test_get.c:1182 if i == 17
