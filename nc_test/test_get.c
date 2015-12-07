@@ -2093,10 +2093,10 @@ test_nc_get_vara_text(void)
 		edge[j] = 0;
 	    }
 	    err = nc_get_vara_text(BAD_ID, i, start, edge, value);
-	    IF (err != NC_EBADID) 
+	    IF (err != NC_EBADID)
 		error("bad ncid: status = %d", err);
 	    err = nc_get_vara_text(ncid, BAD_VARID, start, edge, value);
-	    IF (err != NC_ENOTVAR) 
+	    IF (err != NC_ENOTVAR)
 		error("bad var id: status = %d", err);
 	    for (j = 0; j < var_rank[i]; j++) {
 		if (var_dimid[i][j] > 0) {		/* skip record dim */
@@ -2109,7 +2109,7 @@ test_nc_get_vara_text(void)
 	    }
 	    err = nc_get_vara_text(ncid, i, start, edge, value);
 	    if (canConvert) {
-		IF (err) 
+		IF (err)
 		    error("%s", nc_strerror(err));
 	    } else {
 		IF (err != NC_ECHAR)
@@ -2258,10 +2258,10 @@ test_nc_get_vara_uchar(void)
 		edge[j] = 0;
 	    }
 	    err = nc_get_vara_uchar(BAD_ID, i, start, edge, value);
-	    IF (err != NC_EBADID) 
+	    IF (err != NC_EBADID)
 		error("bad ncid: status = %d", err);
 	    err = nc_get_vara_uchar(ncid, BAD_VARID, start, edge, value);
-	    IF (err != NC_ENOTVAR) 
+	    IF (err != NC_ENOTVAR)
 		error("bad var id: status = %d", err);
 	    for (j = 0; j < var_rank[i]; j++) {
 		if (var_dimid[i][j] > 0) {		/* skip record dim */
@@ -2274,7 +2274,7 @@ test_nc_get_vara_uchar(void)
 	    }
 	    err = nc_get_vara_uchar(ncid, i, start, edge, value);
 	    if (canConvert) {
-		IF (err) 
+		IF (err)
 		    error("%s", nc_strerror(err));
 	    } else {
 		IF (err != NC_ECHAR)
@@ -2423,10 +2423,10 @@ test_nc_get_vara_schar(void)
 		edge[j] = 0;
 	    }
 	    err = nc_get_vara_schar(BAD_ID, i, start, edge, value);
-	    IF (err != NC_EBADID) 
+	    IF (err != NC_EBADID)
 		error("bad ncid: status = %d", err);
 	    err = nc_get_vara_schar(ncid, BAD_VARID, start, edge, value);
-	    IF (err != NC_ENOTVAR) 
+	    IF (err != NC_ENOTVAR)
 		error("bad var id: status = %d", err);
 	    for (j = 0; j < var_rank[i]; j++) {
 		if (var_dimid[i][j] > 0) {		/* skip record dim */
@@ -2439,7 +2439,7 @@ test_nc_get_vara_schar(void)
 	    }
 	    err = nc_get_vara_schar(ncid, i, start, edge, value);
 	    if (canConvert) {
-		IF (err) 
+		IF (err)
 		    error("%s", nc_strerror(err));
 	    } else {
 		IF (err != NC_ECHAR)
@@ -2588,10 +2588,10 @@ test_nc_get_vara_short(void)
 		edge[j] = 0;
 	    }
 	    err = nc_get_vara_short(BAD_ID, i, start, edge, value);
-	    IF (err != NC_EBADID) 
+	    IF (err != NC_EBADID)
 		error("bad ncid: status = %d", err);
 	    err = nc_get_vara_short(ncid, BAD_VARID, start, edge, value);
-	    IF (err != NC_ENOTVAR) 
+	    IF (err != NC_ENOTVAR)
 		error("bad var id: status = %d", err);
 	    for (j = 0; j < var_rank[i]; j++) {
 		if (var_dimid[i][j] > 0) {		/* skip record dim */
@@ -2604,7 +2604,7 @@ test_nc_get_vara_short(void)
 	    }
 	    err = nc_get_vara_short(ncid, i, start, edge, value);
 	    if (canConvert) {
-		IF (err) 
+		IF (err)
 		    error("%s", nc_strerror(err));
 	    } else {
 		IF (err != NC_ECHAR)
@@ -2753,10 +2753,10 @@ test_nc_get_vara_int(void)
 		edge[j] = 0;
 	    }
 	    err = nc_get_vara_int(BAD_ID, i, start, edge, value);
-	    IF (err != NC_EBADID) 
+	    IF (err != NC_EBADID)
 		error("bad ncid: status = %d", err);
 	    err = nc_get_vara_int(ncid, BAD_VARID, start, edge, value);
-	    IF (err != NC_ENOTVAR) 
+	    IF (err != NC_ENOTVAR)
 		error("bad var id: status = %d", err);
 	    for (j = 0; j < var_rank[i]; j++) {
 		if (var_dimid[i][j] > 0) {		/* skip record dim */
@@ -2769,7 +2769,7 @@ test_nc_get_vara_int(void)
 	    }
 	    err = nc_get_vara_int(ncid, i, start, edge, value);
 	    if (canConvert) {
-		IF (err) 
+		IF (err)
 		    error("%s", nc_strerror(err));
 	    } else {
 		IF (err != NC_ECHAR)
@@ -2918,10 +2918,10 @@ test_nc_get_vara_long(void)
 		edge[j] = 0;
 	    }
 	    err = nc_get_vara_long(BAD_ID, i, start, edge, value);
-	    IF (err != NC_EBADID) 
+	    IF (err != NC_EBADID)
 		error("bad ncid: status = %d", err);
 	    err = nc_get_vara_long(ncid, BAD_VARID, start, edge, value);
-	    IF (err != NC_ENOTVAR) 
+	    IF (err != NC_ENOTVAR)
 		error("bad var id: status = %d", err);
 	    for (j = 0; j < var_rank[i]; j++) {
 		if (var_dimid[i][j] > 0) {		/* skip record dim */
@@ -2934,7 +2934,7 @@ test_nc_get_vara_long(void)
 	    }
 	    err = nc_get_vara_long(ncid, i, start, edge, value);
 	    if (canConvert) {
-		IF (err) 
+		IF (err)
 		    error("%s", nc_strerror(err));
 	    } else {
 		IF (err != NC_ECHAR)
@@ -3083,10 +3083,10 @@ test_nc_get_vara_float(void)
 		edge[j] = 0;
 	    }
 	    err = nc_get_vara_float(BAD_ID, i, start, edge, value);
-	    IF (err != NC_EBADID) 
+	    IF (err != NC_EBADID)
 		error("bad ncid: status = %d", err);
 	    err = nc_get_vara_float(ncid, BAD_VARID, start, edge, value);
-	    IF (err != NC_ENOTVAR) 
+	    IF (err != NC_ENOTVAR)
 		error("bad var id: status = %d", err);
 	    for (j = 0; j < var_rank[i]; j++) {
 		if (var_dimid[i][j] > 0) {		/* skip record dim */
@@ -3099,7 +3099,7 @@ test_nc_get_vara_float(void)
 	    }
 	    err = nc_get_vara_float(ncid, i, start, edge, value);
 	    if (canConvert) {
-		IF (err) 
+		IF (err)
 		    error("%s", nc_strerror(err));
 	    } else {
 		IF (err != NC_ECHAR)
@@ -3248,10 +3248,10 @@ test_nc_get_vara_double(void)
 		edge[j] = 0;
 	    }
 	    err = nc_get_vara_double(BAD_ID, i, start, edge, value);
-	    IF (err != NC_EBADID) 
+	    IF (err != NC_EBADID)
 		error("bad ncid: status = %d", err);
 	    err = nc_get_vara_double(ncid, BAD_VARID, start, edge, value);
-	    IF (err != NC_ENOTVAR) 
+	    IF (err != NC_ENOTVAR)
 		error("bad var id: status = %d", err);
 	    for (j = 0; j < var_rank[i]; j++) {
 		if (var_dimid[i][j] > 0) {		/* skip record dim */
@@ -3264,7 +3264,7 @@ test_nc_get_vara_double(void)
 	    }
 	    err = nc_get_vara_double(ncid, i, start, edge, value);
 	    if (canConvert) {
-		IF (err) 
+		IF (err)
 		    error("%s", nc_strerror(err));
 	    } else {
 		IF (err != NC_ECHAR)
@@ -3413,10 +3413,10 @@ test_nc_get_vara_ushort(void)
 		edge[j] = 0;
 	    }
 	    err = nc_get_vara_ushort(BAD_ID, i, start, edge, value);
-	    IF (err != NC_EBADID) 
+	    IF (err != NC_EBADID)
 		error("bad ncid: status = %d", err);
 	    err = nc_get_vara_ushort(ncid, BAD_VARID, start, edge, value);
-	    IF (err != NC_ENOTVAR) 
+	    IF (err != NC_ENOTVAR)
 		error("bad var id: status = %d", err);
 	    for (j = 0; j < var_rank[i]; j++) {
 		if (var_dimid[i][j] > 0) {		/* skip record dim */
@@ -3429,7 +3429,7 @@ test_nc_get_vara_ushort(void)
 	    }
 	    err = nc_get_vara_ushort(ncid, i, start, edge, value);
 	    if (canConvert) {
-		IF (err) 
+		IF (err)
 		    error("%s", nc_strerror(err));
 	    } else {
 		IF (err != NC_ECHAR)
@@ -3578,10 +3578,10 @@ test_nc_get_vara_uint(void)
 		edge[j] = 0;
 	    }
 	    err = nc_get_vara_uint(BAD_ID, i, start, edge, value);
-	    IF (err != NC_EBADID) 
+	    IF (err != NC_EBADID)
 		error("bad ncid: status = %d", err);
 	    err = nc_get_vara_uint(ncid, BAD_VARID, start, edge, value);
-	    IF (err != NC_ENOTVAR) 
+	    IF (err != NC_ENOTVAR)
 		error("bad var id: status = %d", err);
 	    for (j = 0; j < var_rank[i]; j++) {
 		if (var_dimid[i][j] > 0) {		/* skip record dim */
@@ -3594,7 +3594,7 @@ test_nc_get_vara_uint(void)
 	    }
 	    err = nc_get_vara_uint(ncid, i, start, edge, value);
 	    if (canConvert) {
-		IF (err) 
+		IF (err)
 		    error("%s", nc_strerror(err));
 	    } else {
 		IF (err != NC_ECHAR)
@@ -3743,10 +3743,10 @@ test_nc_get_vara_longlong(void)
 		edge[j] = 0;
 	    }
 	    err = nc_get_vara_longlong(BAD_ID, i, start, edge, value);
-	    IF (err != NC_EBADID) 
+	    IF (err != NC_EBADID)
 		error("bad ncid: status = %d", err);
 	    err = nc_get_vara_longlong(ncid, BAD_VARID, start, edge, value);
-	    IF (err != NC_ENOTVAR) 
+	    IF (err != NC_ENOTVAR)
 		error("bad var id: status = %d", err);
 	    for (j = 0; j < var_rank[i]; j++) {
 		if (var_dimid[i][j] > 0) {		/* skip record dim */
@@ -3759,7 +3759,7 @@ test_nc_get_vara_longlong(void)
 	    }
 	    err = nc_get_vara_longlong(ncid, i, start, edge, value);
 	    if (canConvert) {
-		IF (err) 
+		IF (err)
 		    error("%s", nc_strerror(err));
 	    } else {
 		IF (err != NC_ECHAR)
@@ -3908,10 +3908,10 @@ test_nc_get_vara_ulonglong(void)
 		edge[j] = 0;
 	    }
 	    err = nc_get_vara_ulonglong(BAD_ID, i, start, edge, value);
-	    IF (err != NC_EBADID) 
+	    IF (err != NC_EBADID)
 		error("bad ncid: status = %d", err);
 	    err = nc_get_vara_ulonglong(ncid, BAD_VARID, start, edge, value);
-	    IF (err != NC_ENOTVAR) 
+	    IF (err != NC_ENOTVAR)
 		error("bad var id: status = %d", err);
 	    for (j = 0; j < var_rank[i]; j++) {
 		if (var_dimid[i][j] > 0) {		/* skip record dim */
@@ -3924,7 +3924,7 @@ test_nc_get_vara_ulonglong(void)
 	    }
 	    err = nc_get_vara_ulonglong(ncid, i, start, edge, value);
 	    if (canConvert) {
-		IF (err) 
+		IF (err)
 		    error("%s", nc_strerror(err));
 	    } else {
 		IF (err != NC_ECHAR)
@@ -4134,7 +4134,7 @@ test_nc_get_vars_text(void)
 			error("error in toMixedBase 1");
 		    for (d = 0; d < var_rank[i]; d++)
 			index2[d] = index[d] + index2[d] * stride[d];
-		    expect[j] = hash4(var_type[i], var_rank[i], index2, 
+		    expect[j] = hash4(var_type[i], var_rank[i], index2,
 			NCT_TEXT);
 		    if (inRange3(expect[j],var_type[i],NCT_TEXT)) {
 			allInIntRange = allInIntRange && expect[j] >= text_min
@@ -4308,7 +4308,7 @@ test_nc_get_vars_uchar(void)
 			error("error in toMixedBase 1");
 		    for (d = 0; d < var_rank[i]; d++)
 			index2[d] = index[d] + index2[d] * stride[d];
-		    expect[j] = hash4(var_type[i], var_rank[i], index2, 
+		    expect[j] = hash4(var_type[i], var_rank[i], index2,
 			NCT_UCHAR);
 		    if (inRange3(expect[j],var_type[i],NCT_UCHAR)) {
 			allInIntRange = allInIntRange && expect[j] >= uchar_min
@@ -4482,7 +4482,7 @@ test_nc_get_vars_schar(void)
 			error("error in toMixedBase 1");
 		    for (d = 0; d < var_rank[i]; d++)
 			index2[d] = index[d] + index2[d] * stride[d];
-		    expect[j] = hash4(var_type[i], var_rank[i], index2, 
+		    expect[j] = hash4(var_type[i], var_rank[i], index2,
 			NCT_SCHAR);
 		    if (inRange3(expect[j],var_type[i],NCT_SCHAR)) {
 			allInIntRange = allInIntRange && expect[j] >= schar_min
@@ -4656,7 +4656,7 @@ test_nc_get_vars_short(void)
 			error("error in toMixedBase 1");
 		    for (d = 0; d < var_rank[i]; d++)
 			index2[d] = index[d] + index2[d] * stride[d];
-		    expect[j] = hash4(var_type[i], var_rank[i], index2, 
+		    expect[j] = hash4(var_type[i], var_rank[i], index2,
 			NCT_SHORT);
 		    if (inRange3(expect[j],var_type[i],NCT_SHORT)) {
 			allInIntRange = allInIntRange && expect[j] >= short_min
@@ -4830,7 +4830,7 @@ test_nc_get_vars_int(void)
 			error("error in toMixedBase 1");
 		    for (d = 0; d < var_rank[i]; d++)
 			index2[d] = index[d] + index2[d] * stride[d];
-		    expect[j] = hash4(var_type[i], var_rank[i], index2, 
+		    expect[j] = hash4(var_type[i], var_rank[i], index2,
 			NCT_INT);
 		    if (inRange3(expect[j],var_type[i],NCT_INT)) {
 			allInIntRange = allInIntRange && expect[j] >= int_min
@@ -5004,7 +5004,7 @@ test_nc_get_vars_long(void)
 			error("error in toMixedBase 1");
 		    for (d = 0; d < var_rank[i]; d++)
 			index2[d] = index[d] + index2[d] * stride[d];
-		    expect[j] = hash4(var_type[i], var_rank[i], index2, 
+		    expect[j] = hash4(var_type[i], var_rank[i], index2,
 			NCT_LONG);
 		    if (inRange3(expect[j],var_type[i],NCT_LONG)) {
 			allInIntRange = allInIntRange && expect[j] >= long_min
@@ -5178,7 +5178,7 @@ test_nc_get_vars_float(void)
 			error("error in toMixedBase 1");
 		    for (d = 0; d < var_rank[i]; d++)
 			index2[d] = index[d] + index2[d] * stride[d];
-		    expect[j] = hash4(var_type[i], var_rank[i], index2, 
+		    expect[j] = hash4(var_type[i], var_rank[i], index2,
 			NCT_FLOAT);
 		    if (inRange3(expect[j],var_type[i],NCT_FLOAT)) {
 			allInIntRange = allInIntRange && expect[j] >= float_min
@@ -5352,7 +5352,7 @@ test_nc_get_vars_double(void)
 			error("error in toMixedBase 1");
 		    for (d = 0; d < var_rank[i]; d++)
 			index2[d] = index[d] + index2[d] * stride[d];
-		    expect[j] = hash4(var_type[i], var_rank[i], index2, 
+		    expect[j] = hash4(var_type[i], var_rank[i], index2,
 			NCT_DOUBLE);
 		    if (inRange3(expect[j],var_type[i],NCT_DOUBLE)) {
 			allInIntRange = allInIntRange && expect[j] >= double_min
@@ -5526,7 +5526,7 @@ test_nc_get_vars_ushort(void)
 			error("error in toMixedBase 1");
 		    for (d = 0; d < var_rank[i]; d++)
 			index2[d] = index[d] + index2[d] * stride[d];
-		    expect[j] = hash4(var_type[i], var_rank[i], index2, 
+		    expect[j] = hash4(var_type[i], var_rank[i], index2,
 			NCT_USHORT);
 		    if (inRange3(expect[j],var_type[i],NCT_USHORT)) {
 			allInIntRange = allInIntRange && expect[j] >= ushort_min
@@ -5700,7 +5700,7 @@ test_nc_get_vars_uint(void)
 			error("error in toMixedBase 1");
 		    for (d = 0; d < var_rank[i]; d++)
 			index2[d] = index[d] + index2[d] * stride[d];
-		    expect[j] = hash4(var_type[i], var_rank[i], index2, 
+		    expect[j] = hash4(var_type[i], var_rank[i], index2,
 			NCT_UINT);
 		    if (inRange3(expect[j],var_type[i],NCT_UINT)) {
 			allInIntRange = allInIntRange && expect[j] >= uint_min
@@ -5874,7 +5874,7 @@ test_nc_get_vars_longlong(void)
 			error("error in toMixedBase 1");
 		    for (d = 0; d < var_rank[i]; d++)
 			index2[d] = index[d] + index2[d] * stride[d];
-		    expect[j] = hash4(var_type[i], var_rank[i], index2, 
+		    expect[j] = hash4(var_type[i], var_rank[i], index2,
 			NCT_LONGLONG);
 		    if (inRange3(expect[j],var_type[i],NCT_LONGLONG)) {
 			allInIntRange = allInIntRange && expect[j] >= longlong_min
@@ -6048,7 +6048,7 @@ test_nc_get_vars_ulonglong(void)
 			error("error in toMixedBase 1");
 		    for (d = 0; d < var_rank[i]; d++)
 			index2[d] = index[d] + index2[d] * stride[d];
-		    expect[j] = hash4(var_type[i], var_rank[i], index2, 
+		    expect[j] = hash4(var_type[i], var_rank[i], index2,
 			NCT_ULONGLONG);
 		    if (inRange3(expect[j],var_type[i],NCT_ULONGLONG)) {
 			allInIntRange = allInIntRange && expect[j] >= ulonglong_min
@@ -6261,7 +6261,7 @@ test_nc_get_varm_text(void)
                     }
                     for (j = 0; j < nels; j++) {
                         if (inRange3(expect[j],var_type[i],NCT_TEXT)
-                                && expect[j] >= text_min 
+                                && expect[j] >= text_min
 				&& expect[j] <= text_max) {
 			    IF (!equal(value[j],expect[j],var_type[i], NCT_TEXT)){
                                 error("value read not that expected");
@@ -6443,7 +6443,7 @@ test_nc_get_varm_uchar(void)
                     }
                     for (j = 0; j < nels; j++) {
                         if (inRange3(expect[j],var_type[i],NCT_UCHAR)
-                                && expect[j] >= uchar_min 
+                                && expect[j] >= uchar_min
 				&& expect[j] <= uchar_max) {
 			    IF (!equal(value[j],expect[j],var_type[i], NCT_UCHAR)){
                                 error("value read not that expected");
@@ -6625,7 +6625,7 @@ test_nc_get_varm_schar(void)
                     }
                     for (j = 0; j < nels; j++) {
                         if (inRange3(expect[j],var_type[i],NCT_SCHAR)
-                                && expect[j] >= schar_min 
+                                && expect[j] >= schar_min
 				&& expect[j] <= schar_max) {
 			    IF (!equal(value[j],expect[j],var_type[i], NCT_SCHAR)){
                                 error("value read not that expected");
@@ -6807,7 +6807,7 @@ test_nc_get_varm_short(void)
                     }
                     for (j = 0; j < nels; j++) {
                         if (inRange3(expect[j],var_type[i],NCT_SHORT)
-                                && expect[j] >= short_min 
+                                && expect[j] >= short_min
 				&& expect[j] <= short_max) {
 			    IF (!equal(value[j],expect[j],var_type[i], NCT_SHORT)){
                                 error("value read not that expected");
@@ -6989,7 +6989,7 @@ test_nc_get_varm_int(void)
                     }
                     for (j = 0; j < nels; j++) {
                         if (inRange3(expect[j],var_type[i],NCT_INT)
-                                && expect[j] >= int_min 
+                                && expect[j] >= int_min
 				&& expect[j] <= int_max) {
 			    IF (!equal(value[j],expect[j],var_type[i], NCT_INT)){
                                 error("value read not that expected");
@@ -7171,7 +7171,7 @@ test_nc_get_varm_long(void)
                     }
                     for (j = 0; j < nels; j++) {
                         if (inRange3(expect[j],var_type[i],NCT_LONG)
-                                && expect[j] >= long_min 
+                                && expect[j] >= long_min
 				&& expect[j] <= long_max) {
 			    IF (!equal(value[j],expect[j],var_type[i], NCT_LONG)){
                                 error("value read not that expected");
@@ -7353,7 +7353,7 @@ test_nc_get_varm_float(void)
                     }
                     for (j = 0; j < nels; j++) {
                         if (inRange3(expect[j],var_type[i],NCT_FLOAT)
-                                && expect[j] >= float_min 
+                                && expect[j] >= float_min
 				&& expect[j] <= float_max) {
 			    IF (!equal(value[j],expect[j],var_type[i], NCT_FLOAT)){
                                 error("value read not that expected");
@@ -7535,7 +7535,7 @@ test_nc_get_varm_double(void)
                     }
                     for (j = 0; j < nels; j++) {
                         if (inRange3(expect[j],var_type[i],NCT_DOUBLE)
-                                && expect[j] >= double_min 
+                                && expect[j] >= double_min
 				&& expect[j] <= double_max) {
 			    IF (!equal(value[j],expect[j],var_type[i], NCT_DOUBLE)){
                                 error("value read not that expected");
@@ -7717,7 +7717,7 @@ test_nc_get_varm_ushort(void)
                     }
                     for (j = 0; j < nels; j++) {
                         if (inRange3(expect[j],var_type[i],NCT_USHORT)
-                                && expect[j] >= ushort_min 
+                                && expect[j] >= ushort_min
 				&& expect[j] <= ushort_max) {
 			    IF (!equal(value[j],expect[j],var_type[i], NCT_USHORT)){
                                 error("value read not that expected");
@@ -7899,7 +7899,7 @@ test_nc_get_varm_uint(void)
                     }
                     for (j = 0; j < nels; j++) {
                         if (inRange3(expect[j],var_type[i],NCT_UINT)
-                                && expect[j] >= uint_min 
+                                && expect[j] >= uint_min
 				&& expect[j] <= uint_max) {
 			    IF (!equal(value[j],expect[j],var_type[i], NCT_UINT)){
                                 error("value read not that expected");
@@ -8081,7 +8081,7 @@ test_nc_get_varm_longlong(void)
                     }
                     for (j = 0; j < nels; j++) {
                         if (inRange3(expect[j],var_type[i],NCT_LONGLONG)
-                                && expect[j] >= longlong_min 
+                                && expect[j] >= longlong_min
 				&& expect[j] <= longlong_max) {
 			    IF (!equal(value[j],expect[j],var_type[i], NCT_LONGLONG)){
                                 error("value read not that expected");
@@ -8263,7 +8263,7 @@ test_nc_get_varm_ulonglong(void)
                     }
                     for (j = 0; j < nels; j++) {
                         if (inRange3(expect[j],var_type[i],NCT_ULONGLONG)
-                                && expect[j] >= ulonglong_min 
+                                && expect[j] >= ulonglong_min
 				&& expect[j] <= ulonglong_max) {
 			    IF (!equal(value[j],expect[j],var_type[i], NCT_ULONGLONG)){
                                 error("value read not that expected");
@@ -8312,20 +8312,20 @@ test_nc_get_att_text(void)
     int nok = 0;      /* count of valid comparisons */
 
     err = file_open(testfile, NC_NOWRITE, &ncid);
-    IF (err) 
+    IF (err)
 	error("nc_open: %s", nc_strerror(err));
 
     for (i = -1; i < numVars; i++) {
         for (j = 0; j < NATTS(i); j++) {
 	    canConvert = (ATT_TYPE(i,j) == NC_CHAR) == (NCT_TEXT == NCT_TEXT);
 	    err = nc_get_att_text(BAD_ID, i, ATT_NAME(i,j), value);
-	    IF (err != NC_EBADID) 
+	    IF (err != NC_EBADID)
 		error("bad ncid: status = %d", err);
 	    err = nc_get_att_text(ncid, BAD_VARID, ATT_NAME(i,j), value);
-	    IF (err != NC_ENOTVAR) 
+	    IF (err != NC_ENOTVAR)
 		error("bad var id: status = %d", err);
 	    err = nc_get_att_text(ncid, i, "noSuch", value);
-	    IF (err != NC_ENOTATT) 
+	    IF (err != NC_ENOTATT)
 		error("Bad attribute name: status = %d", err);
 	    allInExtRange = allInIntRange = 1;
             for (k = 0; k < ATT_LEN(i,j); k++) {
@@ -8398,20 +8398,20 @@ test_nc_get_att_uchar(void)
     int nok = 0;      /* count of valid comparisons */
 
     err = file_open(testfile, NC_NOWRITE, &ncid);
-    IF (err) 
+    IF (err)
 	error("nc_open: %s", nc_strerror(err));
 
     for (i = -1; i < numVars; i++) {
         for (j = 0; j < NATTS(i); j++) {
 	    canConvert = (ATT_TYPE(i,j) == NC_CHAR) == (NCT_UCHAR == NCT_TEXT);
 	    err = nc_get_att_uchar(BAD_ID, i, ATT_NAME(i,j), value);
-	    IF (err != NC_EBADID) 
+	    IF (err != NC_EBADID)
 		error("bad ncid: status = %d", err);
 	    err = nc_get_att_uchar(ncid, BAD_VARID, ATT_NAME(i,j), value);
-	    IF (err != NC_ENOTVAR) 
+	    IF (err != NC_ENOTVAR)
 		error("bad var id: status = %d", err);
 	    err = nc_get_att_uchar(ncid, i, "noSuch", value);
-	    IF (err != NC_ENOTATT) 
+	    IF (err != NC_ENOTATT)
 		error("Bad attribute name: status = %d", err);
 	    allInExtRange = allInIntRange = 1;
             for (k = 0; k < ATT_LEN(i,j); k++) {
@@ -8484,20 +8484,20 @@ test_nc_get_att_schar(void)
     int nok = 0;      /* count of valid comparisons */
 
     err = file_open(testfile, NC_NOWRITE, &ncid);
-    IF (err) 
+    IF (err)
 	error("nc_open: %s", nc_strerror(err));
 
     for (i = -1; i < numVars; i++) {
         for (j = 0; j < NATTS(i); j++) {
 	    canConvert = (ATT_TYPE(i,j) == NC_CHAR) == (NCT_SCHAR == NCT_TEXT);
 	    err = nc_get_att_schar(BAD_ID, i, ATT_NAME(i,j), value);
-	    IF (err != NC_EBADID) 
+	    IF (err != NC_EBADID)
 		error("bad ncid: status = %d", err);
 	    err = nc_get_att_schar(ncid, BAD_VARID, ATT_NAME(i,j), value);
-	    IF (err != NC_ENOTVAR) 
+	    IF (err != NC_ENOTVAR)
 		error("bad var id: status = %d", err);
 	    err = nc_get_att_schar(ncid, i, "noSuch", value);
-	    IF (err != NC_ENOTATT) 
+	    IF (err != NC_ENOTATT)
 		error("Bad attribute name: status = %d", err);
 	    allInExtRange = allInIntRange = 1;
             for (k = 0; k < ATT_LEN(i,j); k++) {
@@ -8570,20 +8570,20 @@ test_nc_get_att_short(void)
     int nok = 0;      /* count of valid comparisons */
 
     err = file_open(testfile, NC_NOWRITE, &ncid);
-    IF (err) 
+    IF (err)
 	error("nc_open: %s", nc_strerror(err));
 
     for (i = -1; i < numVars; i++) {
         for (j = 0; j < NATTS(i); j++) {
 	    canConvert = (ATT_TYPE(i,j) == NC_CHAR) == (NCT_SHORT == NCT_TEXT);
 	    err = nc_get_att_short(BAD_ID, i, ATT_NAME(i,j), value);
-	    IF (err != NC_EBADID) 
+	    IF (err != NC_EBADID)
 		error("bad ncid: status = %d", err);
 	    err = nc_get_att_short(ncid, BAD_VARID, ATT_NAME(i,j), value);
-	    IF (err != NC_ENOTVAR) 
+	    IF (err != NC_ENOTVAR)
 		error("bad var id: status = %d", err);
 	    err = nc_get_att_short(ncid, i, "noSuch", value);
-	    IF (err != NC_ENOTATT) 
+	    IF (err != NC_ENOTATT)
 		error("Bad attribute name: status = %d", err);
 	    allInExtRange = allInIntRange = 1;
             for (k = 0; k < ATT_LEN(i,j); k++) {
@@ -8656,20 +8656,20 @@ test_nc_get_att_int(void)
     int nok = 0;      /* count of valid comparisons */
 
     err = file_open(testfile, NC_NOWRITE, &ncid);
-    IF (err) 
+    IF (err)
 	error("nc_open: %s", nc_strerror(err));
 
     for (i = -1; i < numVars; i++) {
         for (j = 0; j < NATTS(i); j++) {
 	    canConvert = (ATT_TYPE(i,j) == NC_CHAR) == (NCT_INT == NCT_TEXT);
 	    err = nc_get_att_int(BAD_ID, i, ATT_NAME(i,j), value);
-	    IF (err != NC_EBADID) 
+	    IF (err != NC_EBADID)
 		error("bad ncid: status = %d", err);
 	    err = nc_get_att_int(ncid, BAD_VARID, ATT_NAME(i,j), value);
-	    IF (err != NC_ENOTVAR) 
+	    IF (err != NC_ENOTVAR)
 		error("bad var id: status = %d", err);
 	    err = nc_get_att_int(ncid, i, "noSuch", value);
-	    IF (err != NC_ENOTATT) 
+	    IF (err != NC_ENOTATT)
 		error("Bad attribute name: status = %d", err);
 	    allInExtRange = allInIntRange = 1;
             for (k = 0; k < ATT_LEN(i,j); k++) {
@@ -8742,20 +8742,20 @@ test_nc_get_att_long(void)
     int nok = 0;      /* count of valid comparisons */
 
     err = file_open(testfile, NC_NOWRITE, &ncid);
-    IF (err) 
+    IF (err)
 	error("nc_open: %s", nc_strerror(err));
 
     for (i = -1; i < numVars; i++) {
         for (j = 0; j < NATTS(i); j++) {
 	    canConvert = (ATT_TYPE(i,j) == NC_CHAR) == (NCT_LONG == NCT_TEXT);
 	    err = nc_get_att_long(BAD_ID, i, ATT_NAME(i,j), value);
-	    IF (err != NC_EBADID) 
+	    IF (err != NC_EBADID)
 		error("bad ncid: status = %d", err);
 	    err = nc_get_att_long(ncid, BAD_VARID, ATT_NAME(i,j), value);
-	    IF (err != NC_ENOTVAR) 
+	    IF (err != NC_ENOTVAR)
 		error("bad var id: status = %d", err);
 	    err = nc_get_att_long(ncid, i, "noSuch", value);
-	    IF (err != NC_ENOTATT) 
+	    IF (err != NC_ENOTATT)
 		error("Bad attribute name: status = %d", err);
 	    allInExtRange = allInIntRange = 1;
             for (k = 0; k < ATT_LEN(i,j); k++) {
@@ -8828,20 +8828,20 @@ test_nc_get_att_float(void)
     int nok = 0;      /* count of valid comparisons */
 
     err = file_open(testfile, NC_NOWRITE, &ncid);
-    IF (err) 
+    IF (err)
 	error("nc_open: %s", nc_strerror(err));
 
     for (i = -1; i < numVars; i++) {
         for (j = 0; j < NATTS(i); j++) {
 	    canConvert = (ATT_TYPE(i,j) == NC_CHAR) == (NCT_FLOAT == NCT_TEXT);
 	    err = nc_get_att_float(BAD_ID, i, ATT_NAME(i,j), value);
-	    IF (err != NC_EBADID) 
+	    IF (err != NC_EBADID)
 		error("bad ncid: status = %d", err);
 	    err = nc_get_att_float(ncid, BAD_VARID, ATT_NAME(i,j), value);
-	    IF (err != NC_ENOTVAR) 
+	    IF (err != NC_ENOTVAR)
 		error("bad var id: status = %d", err);
 	    err = nc_get_att_float(ncid, i, "noSuch", value);
-	    IF (err != NC_ENOTATT) 
+	    IF (err != NC_ENOTATT)
 		error("Bad attribute name: status = %d", err);
 	    allInExtRange = allInIntRange = 1;
             for (k = 0; k < ATT_LEN(i,j); k++) {
@@ -8914,20 +8914,20 @@ test_nc_get_att_double(void)
     int nok = 0;      /* count of valid comparisons */
 
     err = file_open(testfile, NC_NOWRITE, &ncid);
-    IF (err) 
+    IF (err)
 	error("nc_open: %s", nc_strerror(err));
 
     for (i = -1; i < numVars; i++) {
         for (j = 0; j < NATTS(i); j++) {
 	    canConvert = (ATT_TYPE(i,j) == NC_CHAR) == (NCT_DOUBLE == NCT_TEXT);
 	    err = nc_get_att_double(BAD_ID, i, ATT_NAME(i,j), value);
-	    IF (err != NC_EBADID) 
+	    IF (err != NC_EBADID)
 		error("bad ncid: status = %d", err);
 	    err = nc_get_att_double(ncid, BAD_VARID, ATT_NAME(i,j), value);
-	    IF (err != NC_ENOTVAR) 
+	    IF (err != NC_ENOTVAR)
 		error("bad var id: status = %d", err);
 	    err = nc_get_att_double(ncid, i, "noSuch", value);
-	    IF (err != NC_ENOTATT) 
+	    IF (err != NC_ENOTATT)
 		error("Bad attribute name: status = %d", err);
 	    allInExtRange = allInIntRange = 1;
             for (k = 0; k < ATT_LEN(i,j); k++) {
@@ -9000,20 +9000,20 @@ test_nc_get_att_ushort(void)
     int nok = 0;      /* count of valid comparisons */
 
     err = file_open(testfile, NC_NOWRITE, &ncid);
-    IF (err) 
+    IF (err)
 	error("nc_open: %s", nc_strerror(err));
 
     for (i = -1; i < numVars; i++) {
         for (j = 0; j < NATTS(i); j++) {
 	    canConvert = (ATT_TYPE(i,j) == NC_CHAR) == (NCT_USHORT == NCT_TEXT);
 	    err = nc_get_att_ushort(BAD_ID, i, ATT_NAME(i,j), value);
-	    IF (err != NC_EBADID) 
+	    IF (err != NC_EBADID)
 		error("bad ncid: status = %d", err);
 	    err = nc_get_att_ushort(ncid, BAD_VARID, ATT_NAME(i,j), value);
-	    IF (err != NC_ENOTVAR) 
+	    IF (err != NC_ENOTVAR)
 		error("bad var id: status = %d", err);
 	    err = nc_get_att_ushort(ncid, i, "noSuch", value);
-	    IF (err != NC_ENOTATT) 
+	    IF (err != NC_ENOTATT)
 		error("Bad attribute name: status = %d", err);
 	    allInExtRange = allInIntRange = 1;
             for (k = 0; k < ATT_LEN(i,j); k++) {
@@ -9086,20 +9086,20 @@ test_nc_get_att_uint(void)
     int nok = 0;      /* count of valid comparisons */
 
     err = file_open(testfile, NC_NOWRITE, &ncid);
-    IF (err) 
+    IF (err)
 	error("nc_open: %s", nc_strerror(err));
 
     for (i = -1; i < numVars; i++) {
         for (j = 0; j < NATTS(i); j++) {
 	    canConvert = (ATT_TYPE(i,j) == NC_CHAR) == (NCT_UINT == NCT_TEXT);
 	    err = nc_get_att_uint(BAD_ID, i, ATT_NAME(i,j), value);
-	    IF (err != NC_EBADID) 
+	    IF (err != NC_EBADID)
 		error("bad ncid: status = %d", err);
 	    err = nc_get_att_uint(ncid, BAD_VARID, ATT_NAME(i,j), value);
-	    IF (err != NC_ENOTVAR) 
+	    IF (err != NC_ENOTVAR)
 		error("bad var id: status = %d", err);
 	    err = nc_get_att_uint(ncid, i, "noSuch", value);
-	    IF (err != NC_ENOTATT) 
+	    IF (err != NC_ENOTATT)
 		error("Bad attribute name: status = %d", err);
 	    allInExtRange = allInIntRange = 1;
             for (k = 0; k < ATT_LEN(i,j); k++) {
@@ -9172,20 +9172,20 @@ test_nc_get_att_longlong(void)
     int nok = 0;      /* count of valid comparisons */
 
     err = file_open(testfile, NC_NOWRITE, &ncid);
-    IF (err) 
+    IF (err)
 	error("nc_open: %s", nc_strerror(err));
 
     for (i = -1; i < numVars; i++) {
         for (j = 0; j < NATTS(i); j++) {
 	    canConvert = (ATT_TYPE(i,j) == NC_CHAR) == (NCT_LONGLONG == NCT_TEXT);
 	    err = nc_get_att_longlong(BAD_ID, i, ATT_NAME(i,j), value);
-	    IF (err != NC_EBADID) 
+	    IF (err != NC_EBADID)
 		error("bad ncid: status = %d", err);
 	    err = nc_get_att_longlong(ncid, BAD_VARID, ATT_NAME(i,j), value);
-	    IF (err != NC_ENOTVAR) 
+	    IF (err != NC_ENOTVAR)
 		error("bad var id: status = %d", err);
 	    err = nc_get_att_longlong(ncid, i, "noSuch", value);
-	    IF (err != NC_ENOTATT) 
+	    IF (err != NC_ENOTATT)
 		error("Bad attribute name: status = %d", err);
 	    allInExtRange = allInIntRange = 1;
             for (k = 0; k < ATT_LEN(i,j); k++) {
@@ -9258,20 +9258,20 @@ test_nc_get_att_ulonglong(void)
     int nok = 0;      /* count of valid comparisons */
 
     err = file_open(testfile, NC_NOWRITE, &ncid);
-    IF (err) 
+    IF (err)
 	error("nc_open: %s", nc_strerror(err));
 
     for (i = -1; i < numVars; i++) {
         for (j = 0; j < NATTS(i); j++) {
 	    canConvert = (ATT_TYPE(i,j) == NC_CHAR) == (NCT_ULONGLONG == NCT_TEXT);
 	    err = nc_get_att_ulonglong(BAD_ID, i, ATT_NAME(i,j), value);
-	    IF (err != NC_EBADID) 
+	    IF (err != NC_EBADID)
 		error("bad ncid: status = %d", err);
 	    err = nc_get_att_ulonglong(ncid, BAD_VARID, ATT_NAME(i,j), value);
-	    IF (err != NC_ENOTVAR) 
+	    IF (err != NC_ENOTVAR)
 		error("bad var id: status = %d", err);
 	    err = nc_get_att_ulonglong(ncid, i, "noSuch", value);
-	    IF (err != NC_ENOTATT) 
+	    IF (err != NC_ENOTATT)
 		error("Bad attribute name: status = %d", err);
 	    allInExtRange = allInIntRange = 1;
             for (k = 0; k < ATT_LEN(i,j); k++) {
@@ -9327,5 +9327,3 @@ test_nc_get_att_ulonglong(void)
 	error("nc_close: %s", nc_strerror(err));
     print_nok(nok);
 }
-
-
