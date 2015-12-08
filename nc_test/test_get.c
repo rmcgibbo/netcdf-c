@@ -1173,8 +1173,8 @@ test_nc_get_var_schar(void)
 		error("error in toMixedBase 1");
 	    expect[j] = hash4(var_type[i], var_rank[i], index, NCT_SCHAR);
 	    if (inRange3(expect[j],var_type[i], NCT_SCHAR)) {
-		allInIntRange = allInIntRange && expect[j] >= schar_min
-			    && expect[j] <= schar_max;
+          allInIntRange = allInIntRange && (expect[j] >= schar_min)
+            && (expect[j] <= schar_max);
 	    } else {
 		allInExtRange = 0;
 	    }

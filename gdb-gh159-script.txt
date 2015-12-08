@@ -1,4 +1,9 @@
 break test_get.c:1169 if i == 17
+
+command
+break inRange3
+end
+
 break test_get.c:1183 if i == 17 && j == 2
 commands
 print i
