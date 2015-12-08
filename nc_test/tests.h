@@ -26,8 +26,17 @@
 
     /* Limits of external types (based on those in ncx.h) */
 
-#define X_CHAR_MIN	CHAR_MIN
-#define X_CHAR_MAX	CHAR_MAX
+/* We can't make assumptions based on CHAR_MAX, because
+   on some platforms CHAR_MAX is either signed (127) or
+   unsigned, (255). This fouled some tests. */
+#ifdef CHAR_IS_SIGNED
+#define X_CHAR_MIN	SCHAR_MIN
+#define X_CHAR_MAX	SCHAR_MAX
+#else
+#define X_CHAR_MIN 0
+#define X_CHAR_MAX UCHAR_MAX
+#endif
+
 #define X_BYTE_MIN	(-128)
 #define X_BYTE_MAX	127
 #define X_SHORT_MIN	(-32768)
@@ -50,7 +59,7 @@
 #define X_DOUBLE_MAX    1.79769313486230e+308
 #else
 /* scalb(1. - scalb(.5 , -52), 1024) */
-#define X_DOUBLE_MAX	1.7976931348623157e+308 
+#define X_DOUBLE_MAX	1.7976931348623157e+308
 #endif
 #define X_DOUBLE_MIN	(-X_DOUBLE_MAX)
 

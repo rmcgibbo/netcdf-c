@@ -42,11 +42,11 @@ inRange(const double value, const nc_type datatype)
 static int
 inRange_uchar(const double value, const nc_type datatype)
 {
-    if (datatype == NC_BYTE) {
+  if (datatype == NC_BYTE) {
 	return(value >= 0 && value <= 255);
-    }
-    /* else */
-    return inRange(value, datatype);
+  }
+  /* else */
+  return inRange(value, datatype);
 }
 
 static int
@@ -59,7 +59,11 @@ inRange_schar(const double value, const nc_type datatype)
          * uchar and scahr: do not check for range error. See
          * http://www.unidata.ucar.edu/software/netcdf/docs_rc/data_type.html#type_conversion
          */
-        return(value >= X_CHAR_MIN && value <= X_CHAR_MAX);
+#ifdef CHAR_IS_SIGNED
+      return(value >= X_CHAR_MIN && value <= X_CHAR_MAX);
+#else
+      return(value >= SCHAR_MIN && value <= SCHAR_MAX);
+#endif
     }
     /* else */
     return inRange(value, datatype);
